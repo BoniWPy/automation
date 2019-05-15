@@ -39,6 +39,12 @@ case $number in
 *)
 echo "Sorri brow try againts latter";;
 esac
+echo -e "create a directory for global installations"
+mkdir ~/.npm
+npm config set prefix ~/.npm
+#nano ~/.bashrc
+export PATH="$PATH:$HOME/.npm/bin"
+source ~/.bashrc
 echo "YOUR NODE VERSION IS : "
 sudo node --version
 echo "Done Thanks"
