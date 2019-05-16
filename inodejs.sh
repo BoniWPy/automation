@@ -42,6 +42,8 @@ esac
 echo -e "create a directory for global installations"
 mkdir ~/.npm
 npm config set prefix ~/.npm
+sudo chown -R $USER:$GROUP ~/.npm
+sudo chown -R $USER:$GROUP ~/.config
 #nano ~/.bashrc
 export PATH="$PATH:$HOME/.npm/bin"
 source ~/.bashrc
